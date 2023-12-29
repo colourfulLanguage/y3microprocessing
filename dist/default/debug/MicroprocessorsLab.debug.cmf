@@ -1,0 +1,679 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$build/default/debug/touchscreen.o
+touchscreen_code CODE 0 1FCA6 1FCA6 7E 1 1
+udata_acs COMRAM 1 23 23 6 1 1
+$build/default/debug/config.o
+config CONFIG 4 300000 300000 E 1 1
+$build/default/debug/experiment.o
+udata_acs COMRAM 1 0 0 10 1 1
+experiment_code CODE 0 1FE5E 1FE5E 1A2 1 1
+$build/default/debug/UART.o
+uart_code CODE 0 1FC0A 1FC0A 28 1 1
+udata_acs COMRAM 1 29 29 1 1 1
+$build/default/debug/main.o
+code CODE 0 0 0 28 1 2
+config CONFIG 4 300000 300000 E 1 1
+$build/default/debug/display.o
+udata_acs COMRAM 1 10 10 A 1 1
+display_code CODE 0 1FD24 1FD24 13A 1 1
+$build/default/debug/timer.o
+udata_acs COMRAM 1 1A 1A 9 1 1
+timer_code CODE 0 1FC32 1FC32 74 1 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 60-F15 1
+SFR F16-FFF 1
+BANK0 60-FF 1
+BANK1 100-1FF 1
+BANK2 200-2FF 1
+BANK3 300-3FF 1
+BANK4 400-4FF 1
+BANK5 500-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+BANK8 800-8FF 1
+BANK9 900-9FF 1
+CONST 28-1FC09 1
+IDLOC 200000-200007 1
+SMALLCONST 1000-1FC09 1
+CODE 28-1FC09 1
+BANK10 A00-AFF 1
+BANK11 B00-BFF 1
+BANK12 C00-CFF 1
+BANK13 D00-DFF 1
+BANK14 E00-EFF 1
+BANK15 F00-F15 1
+BIGRAM 28-F15 1
+BIGSFR F16-FFF 1
+COMRAM 2A-5F 1
+EEDATA F00000-F003FF 1
+MEDIUMCONST 1000-FFFF 1
+MEDIUMCONST 11000-1FC09 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$build/default/debug/touchscreen.o
+1FCA6 touchscreen_code CODE >21:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCA8 touchscreen_code CODE >22:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCAA touchscreen_code CODE >24:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCAC touchscreen_code CODE >25:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCAE touchscreen_code CODE >27:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCB0 touchscreen_code CODE >30:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCB2 touchscreen_code CODE >31:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCB4 touchscreen_code CODE >34:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCB6 touchscreen_code CODE >35:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCB8 touchscreen_code CODE >38:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCBA touchscreen_code CODE >39:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCBC touchscreen_code CODE >42:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCBE touchscreen_code CODE >43:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCC0 touchscreen_code CODE >44:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCC2 touchscreen_code CODE >46:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCC4 touchscreen_code CODE >52:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCC6 touchscreen_code CODE >53:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCC8 touchscreen_code CODE >55:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCCA touchscreen_code CODE >56:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCCC touchscreen_code CODE >58:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCCE touchscreen_code CODE >59:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCD2 touchscreen_code CODE >61:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCD4 touchscreen_code CODE >62:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCD6 touchscreen_code CODE >63:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCD8 touchscreen_code CODE >64:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCDA touchscreen_code CODE >66:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCDC touchscreen_code CODE >71:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCDE touchscreen_code CODE >72:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCE0 touchscreen_code CODE >74:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCE2 touchscreen_code CODE >75:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCE4 touchscreen_code CODE >77:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCE6 touchscreen_code CODE >78:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCEA touchscreen_code CODE >80:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCEC touchscreen_code CODE >81:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCEE touchscreen_code CODE >82:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCF0 touchscreen_code CODE >83:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCF2 touchscreen_code CODE >87:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCF4 touchscreen_code CODE >88:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCF6 touchscreen_code CODE >89:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCF8 touchscreen_code CODE >90:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCFA touchscreen_code CODE >92:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCFC touchscreen_code CODE >93:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FCFE touchscreen_code CODE >94:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FD00 touchscreen_code CODE >95:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FD02 touchscreen_code CODE >98:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FD04 touchscreen_code CODE >99:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FD06 touchscreen_code CODE >100:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FD08 touchscreen_code CODE >101:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FD0C touchscreen_code CODE >104:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FD0E touchscreen_code CODE >105:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FD10 touchscreen_code CODE >106:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FD14 touchscreen_code CODE >109:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FD16 touchscreen_code CODE >110:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FD18 touchscreen_code CODE >113:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FD1A touchscreen_code CODE >114:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FD1C touchscreen_code CODE >115:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FD1E touchscreen_code CODE >117:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FD20 touchscreen_code CODE >118:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+1FD22 touchscreen_code CODE >119:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\touchscreen.s
+$build/default/debug/experiment.o
+1FE5E experiment_code CODE >39:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FE60 experiment_code CODE >40:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FE62 experiment_code CODE >41:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FE64 experiment_code CODE >43:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FE68 experiment_code CODE >44:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FE6C experiment_code CODE >45:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FE6E experiment_code CODE >50:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FE70 experiment_code CODE >53:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FE72 experiment_code CODE >54:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FE74 experiment_code CODE >55:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FE78 experiment_code CODE >56:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FE7A experiment_code CODE >57:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FE7C experiment_code CODE >58:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FE80 experiment_code CODE >62:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FE84 experiment_code CODE >64:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FE86 experiment_code CODE >66:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FE88 experiment_code CODE >67:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FE8C experiment_code CODE >68:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FE8E experiment_code CODE >69:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FE90 experiment_code CODE >72:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FE92 experiment_code CODE >74:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FE96 experiment_code CODE >77:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FE98 experiment_code CODE >78:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FE9A experiment_code CODE >79:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FE9E experiment_code CODE >83:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FEA2 experiment_code CODE >84:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FEA4 experiment_code CODE >85:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FEA6 experiment_code CODE >86:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FEA8 experiment_code CODE >90:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FEAC experiment_code CODE >91:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FEB0 experiment_code CODE >92:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FEB4 experiment_code CODE >93:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FEB6 experiment_code CODE >96:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FEBA experiment_code CODE >97:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FEBC experiment_code CODE >99:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FEBE experiment_code CODE >100:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FEC0 experiment_code CODE >102:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FEC2 experiment_code CODE >103:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FEC6 experiment_code CODE >105:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FEC8 experiment_code CODE >106:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FECA experiment_code CODE >107:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FECC experiment_code CODE >108:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FED0 experiment_code CODE >109:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FED2 experiment_code CODE >113:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FED6 experiment_code CODE >114:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FED8 experiment_code CODE >115:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FEDA experiment_code CODE >116:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FEDC experiment_code CODE >117:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FEE0 experiment_code CODE >118:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FEE4 experiment_code CODE >119:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FEE8 experiment_code CODE >120:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FEEA experiment_code CODE >122:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FEEE experiment_code CODE >123:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FEF2 experiment_code CODE >124:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FEF6 experiment_code CODE >125:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FEF8 experiment_code CODE >129:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FEFA experiment_code CODE >136:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FEFC experiment_code CODE >137:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FEFE experiment_code CODE >138:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF00 experiment_code CODE >139:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF02 experiment_code CODE >140:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF04 experiment_code CODE >142:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF06 experiment_code CODE >143:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF08 experiment_code CODE >144:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF0A experiment_code CODE >145:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF0C experiment_code CODE >146:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF0E experiment_code CODE >147:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF10 experiment_code CODE >148:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF12 experiment_code CODE >149:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF14 experiment_code CODE >150:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF16 experiment_code CODE >152:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF18 experiment_code CODE >153:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF1A experiment_code CODE >154:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF1C experiment_code CODE >155:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF1E experiment_code CODE >156:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF20 experiment_code CODE >159:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF22 experiment_code CODE >160:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF26 experiment_code CODE >161:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF28 experiment_code CODE >162:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF2C experiment_code CODE >163:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF2E experiment_code CODE >164:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF32 experiment_code CODE >166:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF34 experiment_code CODE >169:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF36 experiment_code CODE >170:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF38 experiment_code CODE >171:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF3A experiment_code CODE >172:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF3C experiment_code CODE >173:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF3E experiment_code CODE >174:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF40 experiment_code CODE >175:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF42 experiment_code CODE >176:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF44 experiment_code CODE >177:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF48 experiment_code CODE >178:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF4A experiment_code CODE >183:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF4C experiment_code CODE >184:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF4E experiment_code CODE >185:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF50 experiment_code CODE >186:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF52 experiment_code CODE >187:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF54 experiment_code CODE >188:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF56 experiment_code CODE >189:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF58 experiment_code CODE >190:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF5A experiment_code CODE >191:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF5E experiment_code CODE >194:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF60 experiment_code CODE >195:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF62 experiment_code CODE >196:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF64 experiment_code CODE >197:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF66 experiment_code CODE >198:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF68 experiment_code CODE >199:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF6A experiment_code CODE >200:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF6C experiment_code CODE >201:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF6E experiment_code CODE >202:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF72 experiment_code CODE >205:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF74 experiment_code CODE >206:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF76 experiment_code CODE >207:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF78 experiment_code CODE >208:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF7A experiment_code CODE >209:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF7C experiment_code CODE >210:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF7E experiment_code CODE >211:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF80 experiment_code CODE >212:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF82 experiment_code CODE >213:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF86 experiment_code CODE >216:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF88 experiment_code CODE >217:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF8A experiment_code CODE >218:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF8C experiment_code CODE >219:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF8E experiment_code CODE >220:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF90 experiment_code CODE >221:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF92 experiment_code CODE >222:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF94 experiment_code CODE >223:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF96 experiment_code CODE >224:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF9A experiment_code CODE >227:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF9C experiment_code CODE >228:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FF9E experiment_code CODE >229:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFA0 experiment_code CODE >230:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFA2 experiment_code CODE >231:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFA4 experiment_code CODE >232:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFA6 experiment_code CODE >233:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFA8 experiment_code CODE >234:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFAA experiment_code CODE >235:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFAE experiment_code CODE >238:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFB0 experiment_code CODE >239:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFB2 experiment_code CODE >240:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFB4 experiment_code CODE >241:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFB6 experiment_code CODE >242:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFB8 experiment_code CODE >243:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFBA experiment_code CODE >244:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFBC experiment_code CODE >245:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFBE experiment_code CODE >246:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFC2 experiment_code CODE >249:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFC4 experiment_code CODE >250:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFC6 experiment_code CODE >251:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFC8 experiment_code CODE >252:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFCA experiment_code CODE >253:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFCC experiment_code CODE >254:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFCE experiment_code CODE >255:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFD0 experiment_code CODE >256:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFD2 experiment_code CODE >257:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFD6 experiment_code CODE >260:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFD8 experiment_code CODE >261:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFDA experiment_code CODE >262:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFDC experiment_code CODE >263:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFDE experiment_code CODE >264:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFE0 experiment_code CODE >265:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFE2 experiment_code CODE >266:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFE4 experiment_code CODE >267:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFE6 experiment_code CODE >268:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFEA experiment_code CODE >271:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFEC experiment_code CODE >272:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFEE experiment_code CODE >273:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFF0 experiment_code CODE >274:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFF2 experiment_code CODE >275:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFF4 experiment_code CODE >276:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFF6 experiment_code CODE >277:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFF8 experiment_code CODE >278:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFFA experiment_code CODE >279:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+1FFFE experiment_code CODE >283:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\experiment.s
+$build/default/debug/UART.o
+1FC0A uart_code CODE >10:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\UART.s
+1FC0C uart_code CODE >11:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\UART.s
+1FC0E uart_code CODE >12:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\UART.s
+1FC10 uart_code CODE >13:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\UART.s
+1FC12 uart_code CODE >14:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\UART.s
+1FC14 uart_code CODE >15:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\UART.s
+1FC16 uart_code CODE >16:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\UART.s
+1FC18 uart_code CODE >17:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\UART.s
+1FC1A uart_code CODE >19:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\UART.s
+1FC1C uart_code CODE >22:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\UART.s
+1FC1E uart_code CODE >24:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\UART.s
+1FC20 uart_code CODE >25:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\UART.s
+1FC24 uart_code CODE >26:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\UART.s
+1FC26 uart_code CODE >27:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\UART.s
+1FC28 uart_code CODE >28:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\UART.s
+1FC2A uart_code CODE >31:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\UART.s
+1FC2C uart_code CODE >32:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\UART.s
+1FC2E uart_code CODE >33:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\UART.s
+1FC30 uart_code CODE >34:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\UART.s
+$build/default/debug/main.o
+0 code CODE >7:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\main.s
+8 code CODE >11:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\main.s
+C code CODE >13:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\main.s
+E code CODE >14:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\main.s
+10 code CODE >17:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\main.s
+14 code CODE >18:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\main.s
+18 code CODE >19:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\main.s
+1C code CODE >20:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\main.s
+20 code CODE >21:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\main.s
+24 code CODE >26:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\main.s
+$build/default/debug/display.o
+1FD24 display_code CODE >21:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD26 display_code CODE >22:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD28 display_code CODE >23:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD2A display_code CODE >26:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD2C display_code CODE >27:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD2E display_code CODE >28:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD30 display_code CODE >31:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD32 display_code CODE >33:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD34 display_code CODE >36:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD38 display_code CODE >37:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD3A display_code CODE >38:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD3C display_code CODE >39:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD40 display_code CODE >42:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD44 display_code CODE >43:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD46 display_code CODE >44:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD48 display_code CODE >45:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD4C display_code CODE >48:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD4E display_code CODE >49:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD52 display_code CODE >52:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD56 display_code CODE >53:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD58 display_code CODE >54:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD5A display_code CODE >55:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD5E display_code CODE >57:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD62 display_code CODE >58:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD64 display_code CODE >59:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD66 display_code CODE >60:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD6A display_code CODE >63:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD6C display_code CODE >64:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD6E display_code CODE >65:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD70 display_code CODE >66:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD72 display_code CODE >67:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD74 display_code CODE >68:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD76 display_code CODE >69:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD78 display_code CODE >70:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD7A display_code CODE >71:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD7C display_code CODE >72:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD7E display_code CODE >73:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD82 display_code CODE >74:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD84 display_code CODE >75:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD86 display_code CODE >76:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD8A display_code CODE >77:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD8C display_code CODE >84:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD8E display_code CODE >86:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD90 display_code CODE >88:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD92 display_code CODE >89:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD94 display_code CODE >90:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD98 display_code CODE >91:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD9A display_code CODE >97:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD9C display_code CODE >99:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FD9E display_code CODE >101:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDA0 display_code CODE >102:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDA2 display_code CODE >103:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDA6 display_code CODE >104:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDA8 display_code CODE >108:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDAC display_code CODE >109:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDAE display_code CODE >111:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDB0 display_code CODE >112:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDB2 display_code CODE >113:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDB4 display_code CODE >114:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDB6 display_code CODE >118:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDBA display_code CODE >120:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDBC display_code CODE >121:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDC0 display_code CODE >123:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDC2 display_code CODE >124:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDC4 display_code CODE >125:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDC6 display_code CODE >128:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDCA display_code CODE >131:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDCC display_code CODE >132:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDCE display_code CODE >133:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDD0 display_code CODE >135:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDD2 display_code CODE >137:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDD4 display_code CODE >138:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDD6 display_code CODE >139:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDD8 display_code CODE >141:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDDA display_code CODE >142:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDDC display_code CODE >144:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDE0 display_code CODE >146:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDE2 display_code CODE >150:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDE6 display_code CODE >151:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDEA display_code CODE >153:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDEC display_code CODE >154:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDEE display_code CODE >157:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDF2 display_code CODE >158:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDF6 display_code CODE >160:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDF8 display_code CODE >161:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDFC display_code CODE >163:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FDFE display_code CODE >165:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FE00 display_code CODE >166:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FE02 display_code CODE >167:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FE04 display_code CODE >169:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FE08 display_code CODE >171:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FE0A display_code CODE >176:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FE0E display_code CODE >177:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FE12 display_code CODE >178:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FE14 display_code CODE >179:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FE18 display_code CODE >180:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FE1A display_code CODE >183:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FE1E display_code CODE >184:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FE22 display_code CODE >185:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FE24 display_code CODE >186:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FE28 display_code CODE >187:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FE2A display_code CODE >190:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FE2C display_code CODE >191:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FE2E display_code CODE >192:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FE30 display_code CODE >195:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FE32 display_code CODE >196:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FE34 display_code CODE >197:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FE38 display_code CODE >198:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FE3A display_code CODE >201:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FE3C display_code CODE >202:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FE40 display_code CODE >203:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FE42 display_code CODE >204:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FE44 display_code CODE >208:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FE46 display_code CODE >209:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FE48 display_code CODE >210:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FE4A display_code CODE >212:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FE4C display_code CODE >215:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FE50 display_code CODE >217:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FE52 display_code CODE >218:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FE56 display_code CODE >220:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FE58 display_code CODE >221:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FE5A display_code CODE >222:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+1FE5C display_code CODE >223:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\display.s
+$build/default/debug/timer.o
+1FC32 timer_code CODE >20:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC34 timer_code CODE >21:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC36 timer_code CODE >25:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC38 timer_code CODE >26:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC3A timer_code CODE >29:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC3C timer_code CODE >30:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC3E timer_code CODE >33:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC40 timer_code CODE >34:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC42 timer_code CODE >35:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC44 timer_code CODE >38:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC46 timer_code CODE >39:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC48 timer_code CODE >41:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC4A timer_code CODE >45:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC4C timer_code CODE >46:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC4E timer_code CODE >47:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC50 timer_code CODE >50:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC52 timer_code CODE >51:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC56 timer_code CODE >53:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC58 timer_code CODE >59:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC5A timer_code CODE >60:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC5C timer_code CODE >61:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC60 timer_code CODE >62:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC62 timer_code CODE >63:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC64 timer_code CODE >64:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC66 timer_code CODE >66:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC68 timer_code CODE >67:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC6A timer_code CODE >68:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC6C timer_code CODE >69:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC6E timer_code CODE >70:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC70 timer_code CODE >71:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC72 timer_code CODE >72:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC74 timer_code CODE >73:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC78 timer_code CODE >74:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC7A timer_code CODE >77:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC7C timer_code CODE >78:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC7E timer_code CODE >79:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC80 timer_code CODE >80:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC82 timer_code CODE >81:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC84 timer_code CODE >84:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC86 timer_code CODE >85:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC88 timer_code CODE >86:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC8A timer_code CODE >87:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC8C timer_code CODE >88:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC8E timer_code CODE >89:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC90 timer_code CODE >90:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC92 timer_code CODE >91:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC94 timer_code CODE >92:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC96 timer_code CODE >93:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC98 timer_code CODE >94:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC9A timer_code CODE >95:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC9C timer_code CODE >96:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FC9E timer_code CODE >97:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FCA0 timer_code CODE >98:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FCA2 timer_code CODE >99:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+1FCA4 timer_code CODE >100:C:\Users\jamme\Documents\microprocessing\microprocessing\MicroprocessorsLab\MicroprocessorsLab\timer.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__Hspace_0 20000 0 ABS 0 - -
+__Hspace_1 2A 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__Hspace_4 60000E 0 ABS 0 - -
+experiment_end_timer_0_high 6 0 COMRAM 1 udata_acs build/default/debug/experiment.o
+__Hudata_bank0 0 0 ABS 0 udata_bank0 -
+__Hudata_bank1 0 0 ABS 0 udata_bank1 -
+__Hudata_bank2 0 0 ABS 0 udata_bank2 -
+__Hudata_bank3 0 0 ABS 0 udata_bank3 -
+__Hudata_bank4 0 0 ABS 0 udata_bank4 -
+__Hudata_bank5 0 0 ABS 0 udata_bank5 -
+__Hudata_bank6 0 0 ABS 0 udata_bank6 -
+__Hudata_bank7 0 0 ABS 0 udata_bank7 -
+__Hudata_bank8 0 0 ABS 0 udata_bank8 -
+__Hudata_bank9 0 0 ABS 0 udata_bank9 -
+__L__absolute__ 0 0 ABS 0 __absolute__ -
+timer_0_interrupt 1FC4A 0 CODE 0 timer_code build/default/debug/timer.o
+UART_init 1FC0A 0 CODE 0 uart_code build/default/debug/UART.o
+__Hdisplay_code 0 0 ABS 0 display_code -
+__Lexperiment_code 0 0 ABS 0 experiment_code -
+update 1FE64 0 CODE 0 experiment_code build/default/debug/experiment.o
+timer_0_overflow_counter 20 0 COMRAM 1 udata_acs build/default/debug/timer.o
+__Htimer_code 0 0 ABS 0 timer_code -
+__Huart_code 0 0 ABS 0 uart_code -
+experiment_start_timer_0_high 3 0 COMRAM 1 udata_acs build/default/debug/experiment.o
+__Ltimer_code 0 0 ABS 0 timer_code -
+experiment_start_timer_0_overflow 4 0 COMRAM 1 udata_acs build/default/debug/experiment.o
+__Hudata_bank10 0 0 ABS 0 udata_bank10 -
+__Hudata_bank11 0 0 ABS 0 udata_bank11 -
+__Hudata_bank12 0 0 ABS 0 udata_bank12 -
+__Hudata_bank13 0 0 ABS 0 udata_bank13 -
+__Hudata_bank14 0 0 ABS 0 udata_bank14 -
+__Hudata_bank15 0 0 ABS 0 udata_bank15 -
+__Ldisplay_code 0 0 ABS 0 display_code -
+__Luart_code 0 0 ABS 0 uart_code -
+glcd_rect_tile_x 11 0 COMRAM 1 udata_acs build/default/debug/display.o
+glcd_rect_tile_y 12 0 COMRAM 1 udata_acs build/default/debug/display.o
+glcd_rect_tile_x_end 13 0 COMRAM 1 udata_acs build/default/debug/display.o
+glcd_rect_tile_y_end 14 0 COMRAM 1 udata_acs build/default/debug/display.o
+isa$xinst 0 0 ABS 0 - build/default/debug/main.o
+touchscreen_read_x 1FCDC 0 CODE 0 touchscreen_code build/default/debug/touchscreen.o
+touchscreen_read_y 1FCC4 0 CODE 0 touchscreen_code build/default/debug/touchscreen.o
+touchscreen_temp_flags 28 0 COMRAM 1 udata_acs build/default/debug/touchscreen.o
+__Hedata 0 0 ABS 0 edata -
+__Hudata 0 0 ABS 0 udata -
+__Htouchscreen_code 0 0 ABS 0 touchscreen_code -
+__Hconfig 30000E 0 CONFIG 4 config -
+__Ledata 0 0 ABS 0 edata -
+touchscreen_x_high 26 0 COMRAM 1 udata_acs build/default/debug/touchscreen.o
+__Ludata 0 0 ABS 0 udata -
+__Hcode 0 0 ABS 0 code -
+__Hdata 0 0 ABS 0 data -
+__Lcode 0 0 ABS 0 code -
+__Ldata 0 0 ABS 0 data -
+__S0 20000 0 ABS 0 - -
+__S1 2A 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+__Ludata_bank10 0 0 ABS 0 udata_bank10 -
+__Ludata_bank11 0 0 ABS 0 udata_bank11 -
+__Ludata_bank12 0 0 ABS 0 udata_bank12 -
+__Ludata_bank13 0 0 ABS 0 udata_bank13 -
+__Ludata_bank14 0 0 ABS 0 udata_bank14 -
+__Ludata_bank15 0 0 ABS 0 udata_bank15 -
+experiment_end_timer_0_low 5 0 COMRAM 1 udata_acs build/default/debug/experiment.o
+touchscreen_flags 27 0 COMRAM 1 udata_acs build/default/debug/touchscreen.o
+timer_delay_ms 1FC58 0 CODE 0 timer_code build/default/debug/timer.o
+timer_delay_us 1FC84 0 CODE 0 timer_code build/default/debug/timer.o
+experiment_reaction_overflow A 0 COMRAM 1 udata_acs build/default/debug/experiment.o
+__Lconfig 0 0 CONFIG 4 config -
+experiment_random_countdown F 0 COMRAM 1 udata_acs build/default/debug/experiment.o
+isa$std 1 0 ABS 0 - build/default/debug/main.o
+touchscreen_init 1FCA6 0 CODE 0 touchscreen_code build/default/debug/touchscreen.o
+display_write_rect 1FDA8 0 CODE 0 display_code build/default/debug/display.o
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
+__Ltouchscreen_code 0 0 ABS 0 touchscreen_code -
+experiment_flags 1 0 COMRAM 1 udata_acs build/default/debug/experiment.o
+__Ludata_bank0 0 0 ABS 0 udata_bank0 -
+__Ludata_bank1 0 0 ABS 0 udata_bank1 -
+__Ludata_bank2 0 0 ABS 0 udata_bank2 -
+__Ludata_bank3 0 0 ABS 0 udata_bank3 -
+__Ludata_bank4 0 0 ABS 0 udata_bank4 -
+__Ludata_bank5 0 0 ABS 0 udata_bank5 -
+__Ludata_bank6 0 0 ABS 0 udata_bank6 -
+__Ludata_bank7 0 0 ABS 0 udata_bank7 -
+__Ludata_bank8 0 0 ABS 0 udata_bank8 -
+__Ludata_bank9 0 0 ABS 0 udata_bank9 -
+__H__absolute__ 0 0 ABS 0 __absolute__ -
+experiment_reaction_high 9 0 COMRAM 1 udata_acs build/default/debug/experiment.o
+experiment_reaction_low 8 0 COMRAM 1 udata_acs build/default/debug/experiment.o
+experiment_init 1FE5E 0 CODE 0 experiment_code build/default/debug/experiment.o
+timer_init 1FC32 0 CODE 0 timer_code build/default/debug/timer.o
+experiment_start_timer_0_low 2 0 COMRAM 1 udata_acs build/default/debug/experiment.o
+UART_Transmit_Byte 1FC2A 0 CODE 0 uart_code build/default/debug/UART.o
+__Hexperiment_code 0 0 ABS 0 experiment_code -
+display_init 1FD24 0 CODE 0 display_code build/default/debug/display.o
+__Hudata_acs 0 0 ABS 0 udata_acs -
+glcd_tile_data_line 19 0 COMRAM 1 udata_acs build/default/debug/display.o
+experiment_end_timer_0_overflow 7 0 COMRAM 1 udata_acs build/default/debug/experiment.o
+__Ludata_acs 0 0 ABS 0 udata_acs -
+timer_delay_4us 1FC66 0 CODE 0 timer_code build/default/debug/timer.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+uart_code 0 1FC0A 1FC0A 28 1
+touchscreen_code 0 1FCA6 1FCA6 7E 1
+udata_acs 1 0 0 2A 1
+experiment_code 0 1FE5E 1FE5E 1A2 1
+timer_code 0 1FC32 1FC32 74 1
+display_code 0 1FD24 1FD24 13A 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
