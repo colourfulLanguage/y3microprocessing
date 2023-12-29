@@ -1,8 +1,1 @@
-# Microprocessors
-Repository for Physics Year 3 microprocessors lab
-
-A simple assembly program for PIC18 microprocessor
-
-Reads a table (message) from programme memory to data memory
-
-Initialises UART and writes a message (the table) to UART 
+Y3 microprocessing project at Imperial College London. PsychoPIC - hardware and software platform written in PIC18 assembly with a touchscreen and 128x64 GLCD for performing experimental psychology at scale.
